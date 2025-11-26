@@ -27,7 +27,6 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 0 0 25px 25px;
     a{
         color: var(--black);
         font-size: 15px;
@@ -112,7 +111,7 @@ header:has(input:checked) ~ .display{
 .display{
     background-color: var(--bleu);
     border-top: 2px solid var(--white);
-    padding: 15px 21px;
+    padding: 15px 21px 38.75px 21px;
     display: none;
     justify-content: center;
     align-items: center;

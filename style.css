@@ -8,7 +8,8 @@
 }
 
 :root{
-    --bleu: #3E26AA;
+    --dark-blue: #3E26AA;
+    --blue: #482BC9;
     --white: #ffffff;
     --black: #141414;
     --linear: linear-gradient(#3E26AA,#252238);
@@ -21,7 +22,7 @@ body{
 }
 
 header{
-    background-color: var(--bleu);
+    background-color: var(--dark-blue);
     height: 78px;
     padding: 20px;
     display: flex;
@@ -40,6 +41,10 @@ header{
     }
 }
 
+nav{
+    display: none;
+}
+
 .background_lorem{
     width: 100px;
     height: 37.5px;
@@ -48,6 +53,15 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    a{
+        font-size: 15p;
+        font-weight: 600;
+    }
+}
+
+.background_lorem:hover{
+    border: 3px solid var(--black);
 }
 
 a{
@@ -75,19 +89,22 @@ a{
     }
 }
 
+h1{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 35px;
+}
+
 section{
-    margin: 35px 0 70px 0;
+    margin: 20px 0 70px 0;
     padding: 0 28px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    h1{
-        font-size: 25px;
-        font-weight: bold;
-    }
     img{
-        width: 180px;
+        width: 75%;
         margin: 20px 0;
     }
     .left{
@@ -96,11 +113,16 @@ section{
         justify-content: center;
         align-items: center;
     }
-    .right{
-        h2{
-            text-align: center;
-            margin-bottom: 20px;
-        }
+    h2{
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    p{
+        font-size: 15px;
+        font-weight: light;
+        text-align: center;
     }
 }
 
@@ -109,7 +131,7 @@ header:has(input:checked) ~ .display{
 }
 
 .display{
-    background-color: var(--bleu);
+    background-color: var(--dark-blue);
     border-top: 2px solid var(--white);
     padding: 15px 21px 38.75px 21px;
     display: none;
@@ -127,6 +149,7 @@ header:has(input:checked) ~ .display{
     }
     div:hover{
         box-shadow: inset 0 5px 5px #00000050;
+        background-color: var(--blue);
     }
     div:after{
         content: "";
@@ -147,10 +170,11 @@ header:has(input:checked) ~ .display{
 }
 
 .code{
-    background-color: var(--bleu);
+    background-color: var(--dark-blue);
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
     div{
         display: flex;
@@ -174,6 +198,9 @@ header:has(input:checked) ~ .display{
     div:hover{
         background: var(--linearHover);
     }
+    img{
+        width: 30px;
+    }
     p{
         margin-left: 32px;
         font-size: 13px;
@@ -181,7 +208,7 @@ header:has(input:checked) ~ .display{
 }
 
 footer{
-    background-color: var(--bleu);
+    background-color: var(--dark-blue);
     padding: 50px 40px;
     border-radius: 100px 0 100px 0;
     div{
@@ -202,5 +229,158 @@ footer{
     }
     a{
         margin-left: 5px;
+    }
+}
+
+@media screen and (min-width: 515px){
+    .div2::before, .div4:before{
+        content: "";
+        width: 1px;
+        height: 40px;
+        background-color: var(--white);
+        position: absolute;
+        right: 0;
+    }
+}
+
+@media screen and (min-width: 896px){
+
+    .background_lorem{
+        width: 150px;
+        height: 50px;
+        a{
+            font-size: 20px;
+        }
+    }
+
+    h1{
+        font-size: 50px;
+        margin: 69px;
+        text-align: start;
+    }
+
+    section{
+        margin: 34px 0 92px 0; 
+        padding: 0 69px;
+        flex-direction: row;
+        gap: 35px;
+        align-items: start;
+        img{
+            width: 100%;
+            margin: 34px 95px 0 0;
+        }
+        h2{
+            text-align: start;
+            margin-top: 10%;
+            font-size: 47px;
+        }
+        p{
+            text-align: start;
+            font-size: 30px;
+        }
+        .left{
+            width: 50%;
+            align-items: start;
+        }
+        .right{
+            width: 50%;
+        }
+    }
+
+    .code{
+        gap: 65px;
+    }
+
+    .bloc{
+        margin: 169px 0;
+        gap: 105px;
+        div{
+            padding: 10px 26px 34px 10px;
+            width: 350px;
+            height: 250px;
+        }
+        img{
+            width: 40px;
+        }
+        p{
+            font-size: 16px
+        }
+    }
+
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 33px;
+        div{
+            padding: 0;
+            gap: 25px;
+            div{
+                margin-top: 0;
+            }
+        }
+        .reseaux{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-right: 165px;
+        }
+        .cord{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 0 0 84px;
+            border: none;
+            border-left: 2px solid var(--white);
+        }
+        img{
+            width: 60px;
+        }
+    }
+    header{
+        flex-direction: row-reverse;
+    }
+    
+    label{
+        display: none;
+    }
+    
+    nav{
+        display: flex;
+        width: 100%;
+        div:nth-child(1){
+            width: 17%;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 15%;
+            height: 78px;
+            position: relative;
+            cursor: pointer;
+        }
+        div:hover{
+            box-shadow: inset 0 5px 5px #00000050;
+            background-color: var(--blue);
+        }
+        div::before{
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 40px;
+            right: 0;
+            background-color: var(--white);
+        }
+        a{
+            text-decoration: none;
+            color: var(--white);
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+    .div_button{
+        display: none;
     }
 }

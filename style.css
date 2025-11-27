@@ -82,10 +82,10 @@ a{
         right: 1px;
     }
     span:nth-child(1){
-        top: -40%;
+        top: -8px;
     }
     span:nth-child(3){
-        top: 40%;
+        top: 8px;
     }
 }
 

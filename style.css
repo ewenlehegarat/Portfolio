@@ -37,7 +37,7 @@ header{
         width: 30px;
         height: 30px;
         cursor: pointer;
-        opacity: 0;
+        display: none;
     }
 }
 
@@ -69,24 +69,36 @@ a{
     color: var(--white);
 }
 
+.div_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .button_depliant{
     width: 30px;
     position: relative;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     span{
         border-radius: 50px;
         width: 25px;
         height: 2px;
         background-color: var(--white);
-        position: absolute;
         right: 1px;
         transition: transform 0.3s ease;
     }
     span:nth-child(1){
-        top: -8px;
+        transform: translateY(-5px);
+    }
+    span:nth-child(2){
+        transform: translateX(0.1px);
     }
     span:nth-child(3){
-        top: 8px;
+        transform: translateY(5px);
     }
 }
 
@@ -132,8 +144,7 @@ header:has(input:checked) ~ .display{
 }
 
 .div_button input:checked + .button_depliant span:nth-child(1) {
-    transform: rotate(45deg);
-    top: -0;
+    transform: rotate(45deg) translateX(3px);
 }
 
 .div_button input:checked + .button_depliant span:nth-child(2) {
@@ -141,8 +152,7 @@ header:has(input:checked) ~ .display{
 }
 
 .div_button input:checked + .button_depliant span:nth-child(3) {
-    transform: rotate(-45deg);
-    top: 0;
+    transform: rotate(-45deg) translateX(3px);
 }
 
 .display{

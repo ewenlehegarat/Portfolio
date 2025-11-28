@@ -71,7 +71,7 @@ a{
 
 .button_depliant{
     width: 30px;
-    height: 30px;
+    height: auto;
     position: relative;
     span{
         border-radius: 50px;

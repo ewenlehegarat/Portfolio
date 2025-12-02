@@ -154,7 +154,6 @@ header:has(input:checked) ~ .display{
 .div_button input:checked + .button_depliant span:nth-child(3) {
     transform: rotate(-45deg) translateX(3px);
 }
-
 .display{
     background-color: var(--dark-blue);
     border-top: 2px solid var(--white);

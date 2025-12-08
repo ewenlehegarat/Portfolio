@@ -191,6 +191,9 @@ header:has(input:checked) ~ .display{
         position: absolute;
         right: 0;
     }
+    a{
+        text-align: center;
+    }
 }
 
 .code{
